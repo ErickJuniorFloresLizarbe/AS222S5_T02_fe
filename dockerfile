@@ -12,7 +12,7 @@ COPY . /app
 
 RUN npm run build --prod
 
-ENV API_BACKEND = ${DATABASE_USERNAME}
+ENV API_BACKEND = ${API_BACKEND}
 
 EXPOSE 4200
 
