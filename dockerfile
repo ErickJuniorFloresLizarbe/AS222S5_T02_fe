@@ -12,6 +12,8 @@ COPY . /app
 
 RUN npm run build --prod
 
+ENV API_BACKEND = ${DATABASE_USERNAME}
+
 EXPOSE 4200
 
 ENTRYPOINT ["npm", "start"]
