@@ -15,5 +15,5 @@ services:
     image: erickjunior/front:latest
     ports:
       - "4200:4200"
-    #environment:
-    # apiUrl: ${API_BACKEND}
+    environment:
+      apiUrl: ${API_BACKEND}
