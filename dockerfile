@@ -12,6 +12,7 @@ COPY . /app
 
 RUN npm run build --prod
 
+ARG API_BACKEND
 ENV API_BACKEND=${API_BACKEND}
 
 EXPOSE 4200
