@@ -16,6 +16,6 @@ services:
     ports:
       - "4200:4200"
     environment:
-      API_BACKEND: ${API_BACKEND}
+      API_BACKEND: 'https://crispy-space-sniffle-x6j49xwjp67cv99q-8080.app.github.dev'
     depends_on:
       - backend

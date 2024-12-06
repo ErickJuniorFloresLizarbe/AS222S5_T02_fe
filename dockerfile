@@ -10,11 +10,14 @@ RUN npm install
 
 COPY . /app
 
-RUN npm run build --prod
+# Copiar el script de entrada
+COPY entrypoint.sh /app/entrypoint.sh
 
-ARG API_BACKEND
-ENV API_BACKEND=${API_BACKEND}
+RUN chmod +x /app/entrypoint.sh
+
+RUN npm run build --prod
 
 EXPOSE 4200
 
-ENTRYPOINT ["npm", "start"]
+ENTRYPOINT ["/app/entrypoint.sh"]
+
